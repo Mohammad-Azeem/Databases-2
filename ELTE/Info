@@ -1,6 +1,6 @@
 ------------------------------------------------------------------
 2022/23/1 IP-18fAB2E 1 - Databases II
-Jump to Today
+
 Databases II. Lecture
 Wednesday 12.15-13.45,  South Building, room 0-804 
 
@@ -24,7 +24,60 @@ I created a team in Microsoft Teams for the lecture. The name of the team is DB2
 You can join the team with the following team code: edr8hkz
 
 (In this semester the form of education is in-person, but sometimes I will create recordings.)
+###############################################################################
 
+
+Instructor
+Péter Lehotay-Kéry
+lepuaai@inf.elte.hu
+2-507
+Wednesdays 16:00-17:30
+ 
+
+Textbook
+
+Database Systems: The Complete Book by Garcia-Molina, Jeff Ullman and Jennifer Widom
+ 
+
+Practice requirements (Group 4)
+
+Attendance is compulsory, it will be checked. If you miss more than 3 occasions you will not get a practical grade.
+There can be compulsory exercises during practices, and if you don't complete them, it counts as a miss. (see in db2_practice1.txt, db2_practice2.txt ...)
+There will be two tests in the semester, a midterm test (7th practice) and an endterm test (12th practice). In the tests you have to write exercises in paper (you will type it into a file) and write SQL and PL/SQL programs by computer.
+The practical grade (1-5) will be the average of the two test grades. (e.g. Test1: 3, Test2: 4, Average: 3.5, Final practical grade: 4)
+Retake will be in the first week of the exam period. If you retake a test then the average of the old and new grades will be your test grade. (e.g. original: 2, retake: 5 --> test grade: 3.5)
+ 
+
+WEEK 1
+
+Setting up the environment
+
+SQL Developer
+SSH Tunnel
+Reaching the DB from home
+ARAMIS
+host: aramis.inf.elte.hu
+port: 1521
+service_name: aramis
+ ULLMAN
+host: ullman.inf.elte.hu
+port: 1521
+service_name: ullman
+DBA_OBJECTS and DBA_TAB_COLUMNS
+ExercisesLinks to an external site.
+Compulsory Exercise for Practice 1
+Practice material
+WEEK 2
+
+DBA_SYNONYMS, DBA_VIEWS, DBA_SEQUENCES, DBA_DB_LINKS, DBA_TABLES, DBA_DATA_FILES,
+DBA_TEMP_FILES, DBA_TABLESPACES, DBA_SEGMENTS, DBA_EXTENTS, DBA_FREE_SPACE
+ExercisesLinks to an external site.
+Practice material
+WEEK 3
+
+ROWID, B+ tree
+ExercisesLinks to an external site.
+Practice material
 
 
 
