@@ -1,0 +1,49 @@
+1.
+Connect to both databases and create a table whose name is PR01 and has 1 column. 
+The column contains the table names of owner NIKOVITS having  a letter 'B' in its name.
+You do not have to upload or send the solution, I will check it in the databases.
+
+Do not forget to run the following command:
+
+GRANT SELECT ON PR01 TO LKPETER;
+
+2.
+Write a PL/SQL procedure, which prints out for the parameter user his/her newest table (which was created last),
+the size of the table in bytes (the size of the table's segment) and the creation date. 
+The output format should be the following.
+(Number of spaces doesn't count between the columns, date format is yyyy.mm.dd:hh24:mi)
+
+Table_name: NNNNNN   Size: SSSSSS bytes   Created: yyyy.mm.dd.hh:mi
+
+CREATE OR REPLACE PROCEDURE newest_table(p_user VARCHAR2) IS 
+...
+SET SERVEROUTPUT ON
+EXECUTE newest_table('NIKOVITS');
+
+Check your solution with the following procedure:
+EXECUTE check_plsql('newest_table(''nikovits'')');
+
+Check_plsql will call your procedure and compare your output with the correct output 
+character by character. That's why the format of the output is important.
+
+Hint:
+Find the creation date of the object (table) in DBA_OBJECTS, then find the segment(s) of the table
+in DBA_SEGMENTS.
+
+3.
+Write a PL/SQL procedure which counts and prints the number of empty blocks of a table.
+Output format -> Empty Blocks: nnn
+
+CREATE OR REPLACE PROCEDURE empty_blocks(p_owner VARCHAR2, p_table VARCHAR2) IS
+...
+Test:
+-----
+set serveroutput on
+EXECUTE empty_blocks('nikovits', 'employees');
+
+Check your solution with the following procedure:
+EXECUTE check_plsql('empty_blocks(''nikovits'', ''employees'')');
+
+Hint: 
+Count the total number of blocks (see the segment), the filled blocks (use ROWID), 
+the difference is the number of empty blocks.
