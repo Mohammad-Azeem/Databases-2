@@ -1,0 +1,4 @@
+Compulsory exercise for practice 1 Connect to both databases and create a table whose name is PR01 and has 1 column. 
+The column contains the table names of owner NIKOVITS having  a letter 'B' in its name.
+If you have technical problems, ask the instructor!After creating the table, run the GRANT SELECT ON PR01 TO LKPETER command in both databases. 
+You do not have to submit anything, I will check your tables in the database.
