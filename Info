@@ -1,0 +1,141 @@
+-------------------------------------------------------------------
+General info about Computer Science BSc at ELTE: 
+           http://csbsc.elte.hu/
+You can find a lot of important information here, e.g. Regulations,
+Semester Schedule, University Accounts etc.
+Please read the following sections carefully: 
+   "For Students/Regulations", "For Students/System of Education"
+-------------------------------------------------------------------
+
+Databases II. Lecture and Practice
+==================================
+Lecture:          Wednesday 12.15-13.45, South Building, room 0-804  -> Tibor NIKOVITS
+Practice group 1: Monday    14.15-15.45  South Building, room 00-807 -> Tibor NIKOVITS
+Practice group 2: Monday    12.15-13.45  South Building, room 00-807 -> Tibor NIKOVITS
+Practice group 3: Wednesday 16.00-17.30  South Building, room 00-807 -> Péter Lehotay-Kéry
+
+All the handouts, slides, exercises will be on the homepage.
+Start here to find files and topics -> db2_schedule.txt
+
+Lecture requirements
+--------------------
+Written exam (probably in Canvas) at the end of the semester, in the exam period.    <-- Exam
+Attendance is compulsory, it will be checked.                                        <-- Attendance
+(If you have any problems, please let me know about that. I will accept what is 
+acceptable concerning attandance.)
+
+Practice requirements (Group 1 and 2)
+---------------------
+Attendance is compulsory, it will be checked.                                        <-- Attendance
+If you miss more than 3 occasions you will not get a practical grade.
+There can be compulsory exercises during practices, and if you don't complete        <-- Compulsory exercises
+them, it counts as a miss. (see in db2_practice1.txt, db2_practice2.txt ...) 
+There will be two tests in the semester, a midterm test (7th practice)               <-- 2 tests
+and an endterm test (12th practice).
+In the tests you have to write exercises in paper (you will type it into a file) 
+and write SQL and PL/SQL programs by computer.
+The practical grade (1-5) will be the average of the two test grades.
+(e.g. Test1: 3, Test2: 4, Average: 3.5, Final practical grade: 4)
+Retake will be in the first week of the exam period.                                 <-- Retake
+If you retake a test then the average of the old and new grades will
+be your test grade. (e.g. original: 2, retake: 5 --> test grade: 3.5)
+
+Some information about the databases we will use:
+=========================================================================
+We have two databases, see below the connect information.
+When you connect to the databases from SqlDeveloper, you have to fill in 
+the appropriate fields with the following information.
+
+ARAMIS
+host: aramis.inf.elte.hu
+port: 1521
+service_name: aramis
+
+ULLMAN                  
+host: ullman.inf.elte.hu                
+port: 1521
+service_name: ullman
+
+Your username is the same as your Neptun code, you will be informed 
+about the initial password in practical courses.
+You should change your Oracle password in the databases with the following SQL statement:
+ALTER USER my_username IDENTIFIED BY new_password;
+
+You can use a client software -> SqlDeveloper
+SqlDeveloper is installed on computers in Lab (C:\Sqldeveloper) or you can
+download it from my homepage: https://people.inf.elte.hu/nikovits/DB2/
+The name of the file is something like sqldeveloper*.zip
+
+************************************************
+
+!!! Attention !!!
+-----------------
+ELTE has a firewall, so you can connect to the databases from outside ELTE                   <-- Technical info
+domain only with ssh tunneling see details in ssh_tunnel.pdf or ssh_SqlDeveloper.pdf.
+=====================================================================================
+SOME WORDS ABOUT YOUR ACCOUNTS IN THE UNIVERSITY, JUST TO MAKE THIS CLEAR !!!
+
+You have several accounts (with passwords) for different computers or services. Let's see them.
+
+1. caesar account (managed by the University, all students of the University have this account)
+caesar.elte.hu is a cluster of Linux computers. You can use different services with this account,
+e.g. WIFI, homepage, email, login to caesar.elte.hu with ssh connection, etc.
+--> https://info.caesar.elte.hu/
+
+2. Neptun account (managed by the University)
+You can see your courses and results in Neptun system.
+
+3. inf account (managed by the Faculty of Informatics, only students of the Faculty have this account)
+You can use this account to log into computers in the computer labs or into MS Teams.
+
+4. database accounts (managed by me, only students attending some special courses have this account)
+The passwords in the two databases are independent, so if you change one of them, the other will remain.
+I can help you (change or reset your password) only in problems related to your database accounts and not
+in problems related to the other 3 accounts.
+
+For ssh tunneling you will need your caesar account (you will need an ssh connection to caesar.elte.hu), 
+and of course your database account.
+
+
+Topics for the exam (A brief overview of the semester)
+------------------------------------------------------
+Textbook: Hector Garcia-Molina, Jeffrey D. Ullman, Jennifer Widom: Database Systems, The Complete Book.
+
+Oracle architecture
+  01_Oracle_architecture.pptx, 01_Oracle_storage.pptx, 01_Oracle_concepts.docx)
+13.2 Disks
+  02_RAID.docx
+13.5 Arranging Data on Disk
+13.7 Variable-length Data and Records
+13.8 Record Modifications
+
+14.1 Index-Structure Basics
+14.7 Bitmap Indexes
+14.2 B-Trees
+14.3 Hash Tables
+
+15.2 One-Pass algorithms
+15.3 Nested-Loop Joins
+15.4 Two-Pass Algorithms Based on Sorting
+  05_optimization.pptx
+15.5 Two-Pass Algorithms Based on Hashing (15.5.1 - 15.5.5)
+15.8 Algorithms Using More Than Two Passes
+
+16.4 Estimating the Cost of Operations (size estimation)
+  05_optimization.pptx, 05_operation_cost_examples.pptx
+
+17.1 Issues and Models for Resilient Operation
+17.2 Undo logging
+17.3 Redo logging
+17.4 Undo/Redo logging
+17.5 Protecting Against Media Failures
+
+18.1 Serial and serializable schedules
+18.2 Conflict-serializability
+18.3 Enforcing Serializability by Locks
+18.4 Locking Systems With Several Lock Modes
+
+19.2 Deadlocks 
+ 19.2.1 Deadlock Detection by Timeout
+ 19.2.2 The Waits-For Graph  
+ 19.2.3 Deadlock Prevention by Ordering Elements
